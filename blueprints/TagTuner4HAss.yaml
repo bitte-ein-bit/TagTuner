@@ -311,7 +311,7 @@ actions:
                 data:
                   shuffle: true
                 target:
-                  entity_id: !input httpplayer
+                  entity_id: !input massplayer
           - parallel:
               - sequence:
                   - condition: template
