@@ -305,11 +305,11 @@ actions:
           # Other sources keep the original "shuffle after playback" below.
           - if:
               - condition: template
-                value_template: "{{ shuffle_playlist == true and source == 'mass' }}"
+                value_template: "{{ source == 'mass' }}"
             then:
               - action: media_player.shuffle_set
                 data:
-                  shuffle: true
+                  shuffle: "{{ shuffle_playlist }}"
                 target:
                   entity_id: !input massplayer
           - parallel:
